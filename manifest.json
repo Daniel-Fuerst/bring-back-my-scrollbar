@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Bring Back My Scrollbar!",
+  "version": "1.0",
+  "description": "Firefox extension to bring back scrollbars to websites that disable it ",
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+    "id": "groupsky@kawioni.dev",
+    "strict_min_version": "109.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ]
+}
