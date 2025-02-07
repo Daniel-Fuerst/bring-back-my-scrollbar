@@ -6,5 +6,5 @@ Firefox extension to bring back scrollbars to websites that disable it
 https://addons.mozilla.org/en-US/firefox/addon/bring-back-my-scrollbar/
 
 #### Chrome
-**Chrome is not actively being supported, it should work fine however**
-**Versions of the extension that are known to work are: 1.0**
+**Chrome is currently not supported, support is planned for the future however**
+**Versions known to work anyways: 1.0**
