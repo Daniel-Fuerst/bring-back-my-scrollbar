@@ -11,16 +11,15 @@ function loadConfig() {
 
 document.getElementById('configForm').addEventListener('submit', function(event) {
   event.preventDefault();
-  
+
   const input = document.getElementById('configInput').value;
   const stringList = input.split('\n').map(item => item.trim()).filter(item => item.length > 0);
 
   browser.storage.sync.set({ blacklistDomains: stringList }).then(() => {
-    alert('Konfiguration gespeichert!');
+    alert('Configuration saved!');
   }).catch((error) => {
-    console.error('Fehler beim Speichern der Konfiguration:', error);
+    console.error('Error while saving config! | ', error);
   });
 });
 
 loadConfig();
-

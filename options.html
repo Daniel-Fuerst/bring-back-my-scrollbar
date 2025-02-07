@@ -1,63 +1,27 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Optionen f&uuml;r Bring-Back-My-Scrollbar</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 1.5em;
-    }
-
-    label {
-      font-size: 1.2em;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    textarea {
-      width: 100%;
-      height: 200px;
-      padding: 10px;
-      font-size: 1em;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    button {
-      padding: 10px 15px;
-      font-size: 1em;
-      cursor: pointer;
-      border: none;
-      background-color: #4CAF50;
-      color: white;
-      border-radius: 4px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <title>Bring Back My Scrollbar | Preferences</title>
+  <link rel="stylesheet" href="styles/options.css">
 </head>
 <body>
 
-  <h1>Optionen</h1>
-  
-  <form id="configForm">
-    <label for="configInput">Eine Domain pro Zeile, bei der das Script nicht ausgef&uuml;hrt werden soll:</label>
-    <textarea id="configInput" placeholder="Beispiel: domain1.de
-domain2.de"></textarea>
-    <br>
-    <button type="submit">Speichern</button>
-  </form>
+    <header>
+        <h1>Preferences</h1>
+    </header>
 
-  <script src="options.js"></script>
+    <main>
+        <form id="configForm">
+            <div class="form-group">
+                <label for="configInput">List of Domains on which the extension is disabled</label>
+                <textarea id="configInput" placeholder="domain1.de&#10;domain2.de"></textarea>
+                <button style="width: 20%;" type="submit">Save</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="options.js"></script>
 </body>
 </html>
-

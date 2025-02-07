@@ -16,8 +16,7 @@ browser.storage.sync.get('blacklistDomains').then((result) => {
     document.body.appendChild(s);
   }
 }).catch((error) => {
-    alert('Fehler beim Abrufen der Konfiguration: ' + error);
+    alert('Error while parsing config! | ' + error);
 });
 
 void 0;
-
