@@ -20,3 +20,4 @@ browser.storage.sync.get('blacklistDomains').then((result) => {
 });
 
 void 0;
+
