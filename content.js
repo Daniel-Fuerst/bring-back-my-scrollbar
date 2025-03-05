@@ -14,7 +14,6 @@ async function executeAddon() {
         } else {
             usageType=result.usageType;
         }
-        // DEBUG alert('Using usage type: ' + usageType);
 
         // check whether we already have a config of v1.2 and use it if so
         if (result.domainList && Array.isArray(result.domainList)) {
@@ -25,7 +24,6 @@ async function executeAddon() {
                 isHit="false";
             }
         }
-        // DEBUG alert('Hitstate after domainList: ' + isHit);
 
         // check if the config is not migrated yet
         if (isHit=="unknown") {
@@ -46,19 +44,14 @@ async function executeAddon() {
 }
 
 function checkWhetherToAddScrollbar(isHit, usageType) {
-// DEBUG alert("isHit: " + isHit + ", mode: " + usageType);
-
     if ( ((isHit=="true") && (usageType=="whitelist")) ||
            ((isHit=="false") && (usageType=="blacklist")) ) {
-        // DEBUG alert("inserting scrollbar");
         var r="html,body{overflow:auto !important;}";
         var s=document.createElement("style");
         s.type="text/css";
         s.appendChild(document.createTextNode(r));
         document.body.appendChild(s);
-    } else {
-        // DEBUG alert("not inserting scrollbar");
-    };
+    }
 }
 
 executeAddon();
