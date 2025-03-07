@@ -14,9 +14,16 @@
 
     <main>
         <form id="configForm">
+            <div style="display: ">
+                <input type="radio" name="usageType" value="blacklist">
+                <label for="blacklist">Don't run script on list of domains</label>
+                <br/>
+                <input type="radio" name="usageType" value="whitelist">
+                <label for="blacklist">Run script only on list of domains</label>
+            </div>
             <div class="form-group">
-                <label for="configInput">List of Domains on which the extension is disabled</label>
-                <textarea id="configInput" placeholder="domain1.de&#10;domain2.de"></textarea>
+                <label for="domainList">List of domains</label>
+                <textarea id="domainList" placeholder="domain1.de&#10;domain2.de" style="height: 50vh;"></textarea>
                 <button style="width: 20%;" type="submit">Save</button>
             </div>
         </form>
